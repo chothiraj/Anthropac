@@ -1,0 +1,12 @@
+{
+  "name": "anthropacwork",
+  "version": "0.1.0",
+  "description": "A browser-based ANTHROPAC-inspired app for freelisting and pile sorting cultural domain analysis.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node scripts/build.js",
+    "test": "node --test src/analysis.test.js"
+  }
+}

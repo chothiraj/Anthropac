@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthropac Workbench</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ANTHROPAC-inspired cultural domain workbench</p>
+          <input id="domain" class="domain" aria-label="Domain name" />
+          <p>Collect freelists, enter pile sorts, and inspect salience and co-occurrence matrices without leaving the browser.</p>
+        </div>
+        <button id="export-json">Export JSON</button>
+      </section>
+
+      <section class="grid">
+        <form class="card" id="freelist-form">
+          <h2>☑ Freelisting</h2>
+          <label>Participant<input id="freelist-participant" value="P03" /></label>
+          <label>Items<textarea id="freelist-text" placeholder="One item per line, or comma separated"></textarea></label>
+          <button>Add freelist</button>
+        </form>
+
+        <form class="card" id="pilesort-form">
+          <h2>◎ Pile sorting</h2>
+          <label>Participant<input id="sort-participant" value="P02" /></label>
+          <label>Piles<textarea id="pile-text" placeholder="Label: item, item">Staples: rice, beans
+Special: tamales, mole</textarea></label>
+          <button>Add pile sort</button>
+        </form>
+      </section>
+
+      <section class="grid results">
+        <div class="card wide"><h2>Freelist salience</h2><div id="freelist-results"></div></div>
+        <div class="card wide"><h2>Similarity matrix</h2><div id="matrix-results" class="matrix"></div></div>
+      </section>
+
+      <section class="card"><h2>Study log</h2><div id="study-log"></div></section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
